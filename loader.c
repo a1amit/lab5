@@ -21,7 +21,7 @@ void print_phdr(Elf32_Phdr *phdr, int i)
         prot |= PROT_WRITE;
     if (phdr->p_flags & PF_X)
         prot |= PROT_EXEC;
-    printf("Type: %s, Offset: 0x%06x, VirtAddr: 0x%08x, PhysAddr: 0x%08x, FileSiz: 0x%05x, MemSiz: 0x%05x, Flags: %c%c%c, Align: 0x%x, Prot: %d, Map: %d\n",
+    printf("Type: %s, Offset: 0x%06x, VirtAddr: 0x%08x, PhysAddr: 0x%08x, FileSiz: 0x%05x, MemSiz: 0x%05x, Flags: %c%c%c, Align: %d, Protection flags: %d, Mapping flags: %d\n",
            types[phdr->p_type], phdr->p_offset, phdr->p_vaddr, phdr->p_paddr, phdr->p_filesz, phdr->p_memsz,
            (phdr->p_flags & PF_R ? 'R' : ' '),
            (phdr->p_flags & PF_W ? 'W' : ' '),
