@@ -1,0 +1,11 @@
+2a. 
+the changes indicate a transformation from a position-independent executable 
+with a focus on dynamic linking to a standard executable with a fixed entry point address. 
+The reduction in the number of program and section headers reflects the simplification of 
+the executable format after the linking process.
+
+2b.
+
+2c.
+
+2d.
