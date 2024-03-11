@@ -77,7 +77,7 @@ int main(int argc, char **argv)
     void *map_start = mmap(NULL, size, PROT_READ, MAP_PRIVATE, fd, 0);
     // foreach_phdr(map_start, print_phdr, 0);
     foreach_phdr(map_start, load_phdr, fd);
-    startup(argc - 2, argv + 2, (void *)(((Elf32_Ehdr *)map_start)->e_entry));
+    startup(argc - 1, argv + 1, (void *)(((Elf32_Ehdr *)map_start)->e_entry));
     munmap(map_start, size);
     close(fd);
     return 0;
